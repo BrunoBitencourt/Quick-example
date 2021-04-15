@@ -1,0 +1,26 @@
+Classe Criar Diretorio
+
+•
+import java.io.IOException;
+
+public class CriarDiretorio {
+
+public static void main(String[] args) {
+
+java.io.File diretorio = new java.io.File("C:\\ArquivosAula");
+
+boolean statusDir = diretorio.mkdir();
+System.out.print(statusDir);
+
+java.io.File arquivo = new java.io.File(diretorio, "arq_01.txt");
+
+try {
+boolean statusArq = arquivo.createNewFile();
+System.out.print(statusArq);
+} catch (IOException e) {
+e.printStackTrace();
+}
+
+}
+
+}
